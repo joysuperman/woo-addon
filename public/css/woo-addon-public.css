@@ -1,0 +1,90 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+/* Style for product options group */
+.product-options-group {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style for group items */
+.group-item {
+    margin-bottom: 15px;
+}
+
+/* Style for group titles */
+.group-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.title-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.group-item label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.group-item input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+.group-item .accordion-content {
+    display: none;
+}
+
+.group-item.active .accordion-content {
+    display: block;
+    padding: 10px 0px;
+}
+
+.accordion-title {
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s;
+}
+
+/* Hover effect for accordion title */
+.accordion-title:hover {
+    background-color: #121A3F;
+    color: #FFFFFF;
+    transition: all 0.4s;
+}
+.group-item.active .accordion-title{
+    background-color: #121A3F;
+    color: #FFFFFF;
+}
+
+/* Style for dropdown icon */
+.dropdown-icon {
+    display: inline-block;
+    margin-left: 5px; /* Adjust as needed */
+}
+
+.dropdown-icon i {
+    transition: transform 0.3s ease;
+}
+
+.group-item.active .dropdown-icon i {
+    transform: rotate(180deg);
+}
+
+.error-message{
+    color: red;
+}

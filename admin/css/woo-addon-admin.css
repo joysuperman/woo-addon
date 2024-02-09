@@ -1,0 +1,40 @@
+.group-title{
+    margin-bottom: 20px;
+}
+.option{
+    margin-bottom: 10px;
+}
+.remove-group-button{
+    margin-left: 5px;
+}
+.remove-option-button{
+    margin-left: 5px;
+}
+.product-groups-container {
+    margin-top: 20px;
+}
+
+.product-group {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product-group-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-option {
+    margin-top: 5px;
+}
+
+.product-option-title {
+    font-weight: bold;
+}
+
+.product-option-price {
+    margin-left: 10px;
+    color: #888;
+}
