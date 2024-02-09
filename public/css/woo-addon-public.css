@@ -42,7 +42,7 @@
 }
 
 .group-item.active .accordion-content {
-    display: block;
+    display: block !important;
     padding: 10px 0px;
 }
 

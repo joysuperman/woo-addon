@@ -1,34 +1,6 @@
 (function( $ ) {
 	'use strict';
 
-	/**
-	 * All of the code for your public-facing JavaScript source
-	 * should reside in this file.
-	 *
-	 * Note: It has been assumed you will write jQuery code here, so the
-	 * $ function reference has been prepared for usage within the scope
-	 * of this function.
-	 *
-	 * This enables you to define handlers, for when the DOM is ready:
-	 *
-	 * $(function() {
-	 *
-	 * });
-	 *
-	 * When the window is loaded:
-	 *
-	 * $( window ).load(function() {
-	 *
-	 * });
-	 *
-	 * ...and/or other possibilities.
-	 *
-	 * Ideally, it is not considered best practise to attach more than a
-	 * single DOM-ready or window-load handler for a particular page.
-	 * Although scripts in the WordPress core, Plugins and Themes may be
-	 * practising this, we should strive to set a better example in our own work.
-	 */
-
 	// Add to Cart button click
 	jQuery(document).ready(function($) {
 
@@ -40,7 +12,6 @@
 			// Toggle 'active' class for the parent '.group-item'
 			$(this).parent('.group-item').toggleClass('active');
 		});
-
 
 		$('button.single_add_to_cart_button').on('click', function(e) {
 			var isValid = true;
@@ -55,6 +26,17 @@
 					$(this).find('.error-message').remove();
 				}
 			});
+
+			// Check if any error messages are present
+			var hasError = $('.error-message').length > 0;
+
+			// If there are no errors, open all accordion content
+			if (!hasError) {
+				$('.accordion-content').slideDown();
+				$('.group-item').addClass('active');
+			}
+
+			// Prevent form submission if there are errors
 			if (!isValid) {
 				e.preventDefault();
 			}
@@ -77,7 +59,7 @@
 		}
 
 		// Store original product price on page load
-		var originalPrice = parseFloat($('p.price .woocommerce-Price-amount').text().replace(/[^0-9.-]+/g,""));
+		var originalPrice = parseFloat($('p.price .woocommerce-Price-amount').text().replace(/[^0-9.-]+/g, ""));
 		$('p.price .woocommerce-Price-amount').attr('data-original-price', originalPrice);
 
 		$('.group-item input[type="radio"]').on('change', function() {
